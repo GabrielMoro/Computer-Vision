@@ -43,7 +43,7 @@ def otsu(img):
     return img
 
 
-img = cv.imread("img/img1.jpg")
+img = cv.imread("../img/img1.jpg")
 cv.imshow("Original", img)
 img = cv.cvtColor(img, cv.COLOR_BGR2GRAY)
 
@@ -51,7 +51,7 @@ _,opencvOtsu = cv.threshold(img,0,255,cv.THRESH_BINARY+cv.THRESH_OTSU)
 cv.imshow("OpenCV Otsu", opencvOtsu)
 
 manualOtsu = otsu(img)
-cv.imwrite("img/manual_otsu.jpg", manualOtsu)
+cv.imwrite("../out/manual_otsu.jpg", manualOtsu)
 cv.imshow("Manual Otsu", manualOtsu)
 
 cv.waitKey(0)

@@ -13,11 +13,15 @@ def canny(img, sigma):
 
 
 sigma = 0
-img = cv.imread('img/keanu.jpg')
+img = cv.imread('../img/keanu.jpg')
 img = cv.cvtColor(img, cv.COLOR_BGR2GRAY)
 
-cv.imshow('Manual', canny(img, sigma))
+m_canny = canny(img, sigma)
+
+cv.imshow('Manual', m_canny)
 cv.imshow('OpenCV', cv.Canny(img, 100, 150))
+
+cv.imwrite('../out/manual_canny.jpg', m_canny)
 
 cv.waitKey(0)
 cv.destroyAllWindows()
