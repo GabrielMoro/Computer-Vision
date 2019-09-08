@@ -23,7 +23,7 @@ def floyd(img):
     return img
 
 
-def roger(img):
+def rogers(img):
     img = img.astype('float32')
     row, col = img.shape
     for i in range(row):
@@ -39,7 +39,7 @@ def roger(img):
             img[i + 1, j] += err * 3/8
             if j + 1 < col:
                 img[i + 1, j + 1] += err * 2/8
-    cv.imwrite('../out/halftoning/roger.jpg', img)
+    cv.imwrite('../out/halftoning/rogers.jpg', img)
     return img
 
 
@@ -126,7 +126,7 @@ cv.imshow("Original", img)
 img = cv.cvtColor(img, cv.COLOR_BGR2GRAY)
 
 cv.imshow("Floyd", floyd(img))
-cv.imshow("Roger", roger(img))
+cv.imshow("Rogers", rogers(img))
 cv.imshow("Jarvis", jarvis(img))
 cv.imshow("Stucki", stucki(img))
 
