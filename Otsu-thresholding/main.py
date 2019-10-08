@@ -1,6 +1,5 @@
 import cv2 as cv
 import numpy as np
-from matplotlib import pyplot as plt
 
 def otsu(img):
     hist = cv.calcHist([img],[0],None,[256],[0,256])
