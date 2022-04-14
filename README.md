@@ -1,4 +1,4 @@
-# CV
+# Computer Vision
 
 Computer Vision projects using Python OpenCV
 
