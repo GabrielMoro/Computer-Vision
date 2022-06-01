@@ -47,11 +47,16 @@ cv.imshow("Original", img)
 img = cv.cvtColor(img, cv.COLOR_BGR2GRAY)
 
 _,opencvOtsu = cv.threshold(img,0,255,cv.THRESH_BINARY+cv.THRESH_OTSU)
+cv.imwrite("out/opencv_otsu.jpg", opencvOtsu)
 cv.imshow("OpenCV Otsu", opencvOtsu)
 
 manualOtsu = otsu(img)
-cv.imwrite("../out/manual_otsu.jpg", manualOtsu)
+cv.imwrite("out/manual_otsu.jpg", manualOtsu)
 cv.imshow("Manual Otsu", manualOtsu)
+
+diff = opencvOtsu - manualOtsu
+cv.imwrite("out/diff.jpg", diff)
+cv.imshow("Diff", diff)
 
 cv.waitKey(0)
 cv.destroyAllWindows()
