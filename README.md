@@ -1,6 +1,6 @@
 # Computer Vision
 
-Computer Vision projects using Python OpenCV
+Computer Vision projects using Python
 
 #### Installing OpenCV
 ```
