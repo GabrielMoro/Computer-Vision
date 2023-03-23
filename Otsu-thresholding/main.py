@@ -42,7 +42,7 @@ def otsu(img):
     return img
 
 
-img = cv.imread("../img/img1.jpg")
+img = cv.imread("../images/img1.jpg")
 cv.imshow("Original", img)
 img = cv.cvtColor(img, cv.COLOR_BGR2GRAY)
 

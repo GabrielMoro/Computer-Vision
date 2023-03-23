@@ -1,6 +1,6 @@
 from half import *
 
-img = cv.imread("../img/aqua.jpg")
+img = cv.imread("../images/aqua.jpg")
 cv.imshow("Original", img)
 img = cv.cvtColor(img, cv.COLOR_BGR2GRAY)
 
