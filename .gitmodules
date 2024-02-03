@@ -1,0 +1,3 @@
+[submodule "simple-tracking"]
+	path = simple-tracking
+	url = https://github.com/GabrielMoro/Simple-tracking
